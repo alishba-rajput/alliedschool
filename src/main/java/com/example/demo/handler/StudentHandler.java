@@ -24,13 +24,9 @@ public class StudentHandler {
         return studentService.getAllStudents();
     }
 
-    public List<StudentModel> getStudentByName(String name) {
-        List<Student> students = studentService.getStudentByName(name);
-        List<StudentModel> studentModels = new ArrayList<>();
-        for(Student student : students){
-            studentModels.add(studentTransformer.toModel(student));
-        }
-        return studentModels;
+    public List<Student> getStudentByName(String name) {
+        return studentService.getStudentByName(name);
+
     }
 
     public List<Student> createStudentList() {

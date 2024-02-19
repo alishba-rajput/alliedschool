@@ -25,19 +25,21 @@ public class StudentController {
         return studentHandler.getAllStudents();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/create")
     public String createStudent(@RequestBody Student student){
         studentHandler.createStudent(student);
         return "Student Created Successfully.";
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/name/{name}")
-    public List<StudentModel> getStudentByName(@PathVariable String name){
+    public List<Student> getStudentByName(@PathVariable String name){
        return studentHandler.getStudentByName(name);
     }
 
     @GetMapping("/name")
-    public List<StudentModel> getStudentByNameUsingRequestParam(@RequestParam String name){
+    public List<Student> getStudentByNameUsingRequestParam(@RequestParam String name){
         return studentHandler.getStudentByName(name);
     }
 
