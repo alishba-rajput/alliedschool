@@ -1,5 +1,4 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LayoutOne from "./layout/LayoutOne";
 import LayoutTwo from "./layout/LayoutTwo";
@@ -7,14 +6,15 @@ import LayoutThree from "./layout/LayoutThree";
 import LayoutFour from "./layout/LayoutFour";
 import LayoutFive from "./layout/LayoutFive";
 import LayoutSix from "./layout/LayoutSix";
-import LayoutSeven from './layout/LayoutSeven';
-import LayoutNine from './layout/LayoutNine';
-import Layoutten from './layout/Layoutten';
-import Layouteleven from './layout/Layouteleven';
-import Layouttwelve from './layout/Layouttwelve';
+import LayoutSeven from "./layout/LayoutSeven";
+import LayoutNine from "./layout/LayoutNine";
+import Layoutten from "./layout/Layoutten";
+import Layouteleven from "./layout/Layouteleven";
+import Layouttwelve from "./layout/Layouttwelve";
+
+import Layoutfifteen from "./layout/Layoutfifteen";
 export default function App() {
   //   const [books, setBooks] = useState([]);
-    
 
   //   useEffect(() => {
   //       const fetchData = async () => {
@@ -38,7 +38,6 @@ export default function App() {
   //       fetchData();
   //   }, []);
 
-    
   //         // Call the fetchData function when the component mounts
   //     fetchData();
   // }, []);
@@ -63,6 +62,8 @@ export default function App() {
         <Route path="/Studentrecord" element={<Layoutten />} />
         <Route path="/Studentdetails" element={<Layouteleven />} />
         <Route path="/Booksrecord" element={<Layouttwelve />} />
+       
+        <Route path="/Employeerecord" element={<Layoutfifteen />} />
       </Routes>
     </Router>
   );
