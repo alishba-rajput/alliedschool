@@ -26,7 +26,7 @@ class Student extends React.Component {
               </tr>
             </thead>
             <tbody class="[&>*:nth-child(even)]:bg-gray-100 [&>*:nth-child(odd)]:bg-gray-300">
-              {this.props.students.map((student) => (
+              {this.props.students?.map((student) => (
                 <tr className="text-center">
                   <td className="py-2 px-4 border-b text-sm text-gray-600">
                     {student?.human?.name}

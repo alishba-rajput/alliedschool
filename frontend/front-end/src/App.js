@@ -13,6 +13,9 @@ import Layouteleven from "./layout/Layouteleven";
 import Layouttwelve from "./layout/Layouttwelve";
 
 import Layoutfifteen from "./layout/Layoutfifteen";
+import Layoutsixteen from "./layout/Layoutsixteen";
+import Layoutseventeen from "./layout/Layoutseventeen";
+import Layouttwenty from "./layout/Layouttwenty";
 export default function App() {
   //   const [books, setBooks] = useState([]);
 
@@ -62,8 +65,10 @@ export default function App() {
         <Route path="/Studentrecord" element={<Layoutten />} />
         <Route path="/Studentdetails" element={<Layouteleven />} />
         <Route path="/Booksrecord" element={<Layouttwelve />} />
-       
         <Route path="/Employeerecord" element={<Layoutfifteen />} />
+        <Route path="/Recordform" element={<Layoutsixteen />} />
+        <Route path="/Updatestudent" element={<Layoutseventeen />} />
+        <Route path="/Deletestudent" element={<Layouttwenty />} />
       </Routes>
     </Router>
   );

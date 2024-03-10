@@ -78,6 +78,21 @@ const Menu = () => {
               Employeerecord
             </a>
           </li>
+          <li>
+            <a href="Recordform" className="text-white hover:text-gray-300">
+              Recordform
+            </a>
+          </li>
+          <li>
+            <a href="Updatestudent" className="text-white hover:text-gray-300">
+              Updatestudent
+            </a>
+          </li>
+          <li>
+            <a href="Deletestudent" className="text-white hover:text-gray-300">
+              Deletestudent
+            </a>
+          </li>
           {/* <li>
             <a href="Employeetable" className="text-white hover:text-gray-300">
               Employeetable
@@ -161,7 +176,9 @@ const Menu = () => {
             <a href="contacts" className="text-white hover:text-gray-300 mr-5">
               Contacts
             </a>
+            
           </li>
+          
           <button className="bg-green-400 w-36 h-12 rounded-3xl -mt-2">
             Get Started
             

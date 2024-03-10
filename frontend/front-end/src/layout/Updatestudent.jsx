@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function Studentform() {
+  const [cnic, setCnic] = useState("")
   const [formData, setFormData] = useState({
     fees: "",
     name: "",
@@ -25,7 +26,7 @@ function Studentform() {
     }));
   };
 
-  const handleFormSubmit = async (e) => {
+  const handleFormupdate = async (e) => {
     e.preventDefault();
 
     const bodyData = {
@@ -46,8 +47,8 @@ function Studentform() {
 
     try {
       // Step 2: Make a POST request using fetch
-      const response = await fetch("http://localhost:8080/student/create", {
-        method: "POST",
+      const response = await fetch("http://localhost:8080/student/cnic", {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -58,7 +59,7 @@ function Studentform() {
         throw new Error("Network response was not ok");
       } else {
         //   await response;
-        toast.success("Student Created Successfully.");
+        toast.success("Student updated Successfully.");
         setFormData({
           fees: "",
           name: "",
@@ -75,7 +76,6 @@ function Studentform() {
       console.error("Error:", error);
     }
   };
-
   // Do something with the form data, e.g., send it to a backend API
 
   return (
@@ -235,12 +235,37 @@ function Studentform() {
             required
           />
         </div>
+
         <button
           type="submit"
           className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
-          onClick={handleFormSubmit}
+          onClick={handleFormupdate}
         >
-          Submit
+          Update Student
+        </button>
+        <div>
+        <label
+            htmlFor="cnic"
+            className="block text-gray-600 text-sm font-medium mb-2"
+          >
+            CNIC
+          </label>
+          <input
+            type="text"
+            id="cnic"
+            name="cnic"
+            value={cnic}
+            onChange={setCnic(cnic)}
+            className="w-full p-2 border rounded-md"
+            required
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300"
+          onClick={handleFormupdate}
+        >
+          Delete Student
         </button>
       </form>
     </div>
